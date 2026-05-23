@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan David Fierro Calderón – Desarrollador Backend Java</title>
+    <meta name="description" content="Desarrollador de Software Junior especializado en Backend Java / Spring Boot. Estudiante de Ingeniería de Software – USCO, Neiva.">
+
+    <!-- Fonts: Space Grotesk + DM Sans (UI-UX Pro Max: Tech Startup pairing) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav class="nav" id="nav" aria-label="Navegación principal">
+    <div class="container nav__inner">
+        <a href="#inicio" class="nav__logo" aria-label="Inicio">
+            <span class="nav__logo-b">&lt;</span>JF<span class="nav__logo-b">/&gt;</span>
+        </a>
+
+        <ul class="nav__menu" id="navMenu" role="list">
+            <li><a href="#sobre-mi"   class="nav__link">Sobre mí</a></li>
+            <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+            <li><a href="#proyecto"   class="nav__link">Proyecto</a></li>
+            <li><a href="#educacion"  class="nav__link">Educación</a></li>
+            <li><a href="#contacto"   class="nav__link nav__link--cta">Contacto</a></li>
+        </ul>
+
+        <button class="nav__hamburger" id="hamburger"
+                aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<main>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero" id="inicio" aria-label="Presentación">
+    <!-- Aurora UI: floating gradient blobs (Motion-Driven) -->
+    <div class="aurora" aria-hidden="true">
+        <div class="aurora__blob aurora__blob--1"></div>
+        <div class="aurora__blob aurora__blob--2"></div>
+        <div class="aurora__blob aurora__blob--3"></div>
+    </div>
+
+    <div class="container hero__content">
+
+        <div class="hero__badge hi hi-1">
+            <span class="pulse" aria-hidden="true"></span>
+            Disponible para oportunidades
+        </div>
+
+        <h1 class="hero__name hi hi-2">
+            Juan David<br>
+            <span class="accent">Fierro Calderón</span>
+        </h1>
+
+        <p class="hero__title hi hi-3">
+            Desarrollador de Software Junior – Backend Java
+        </p>
+
+        <p class="hero__desc hi hi-4">
+            Estudiante de Ingeniería de Software en la Universidad Surcolombiana
+            con sólidos fundamentos en desarrollo web y backend. Construyo
+            aplicaciones empresariales robustas con
+            <strong>Java&nbsp;/&nbsp;Spring Boot</strong>,
+            bases de datos <strong>PostgreSQL</strong> e interfaces web modernas.
+        </p>
+
+        <div class="hero__actions hi hi-5">
+            <a href="#proyecto" class="btn btn--primary">Ver mi proyecto</a>
+            <a href="https://github.com/JuanFierro15" target="_blank" rel="noopener noreferrer"
+               class="btn btn--outline">
+                <!-- GitHub icon -->
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+            </a>
+        </div>
+
+        <div class="hero__meta hi hi-6">
+            <span class="hero__chip">
+                <!-- Location icon -->
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                Neiva, Huila, Colombia
+            </span>
+            <span class="hero__chip">
+                <!-- Globe icon -->
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                Español (nativo) · Inglés B2
+            </span>
+        </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     SOBRE MÍ
+════════════════════════════════════════ -->
+<section class="section" id="sobre-mi" aria-labelledby="title-sobre-mi">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__label">01 · Sobre mí</span>
+            <h2 class="section__title" id="title-sobre-mi">¿Quién soy?</h2>
+        </div>
+
+        <div class="about__grid">
+            <div class="about__text reveal">
+                <p>
+                    Soy estudiante de <strong>Ingeniería de Software</strong> en la
+                    Universidad Surcolombiana con sólidos fundamentos en desarrollo web y
+                    backend. Me apasiona construir sistemas robustos, limpios y escalables.
+                </p>
+                <p>
+                    Mi enfoque está en el ecosistema <strong>Java&nbsp;/&nbsp;Spring Boot</strong>,
+                    donde he desarrollado aplicaciones empresariales reales aplicando
+                    arquitectura <strong>MVC multicapa</strong>, control de acceso basado
+                    en roles (RBAC) con Spring Security y ORM con Hibernate.
+                </p>
+                <p>
+                    Busco mi primera oportunidad laboral formal donde pueda aportar valor
+                    desde el primer día y seguir creciendo como desarrollador dentro de un
+                    equipo profesional.
+                </p>
+            </div>
+
+            <div class="stats reveal d1">
+                <div class="stat-card">
+                    <span class="stat-card__n">1</span>
+                    <span class="stat-card__l">Proyecto empresarial completo</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__n">10+</span>
+                    <span class="stat-card__l">Tecnologías del stack</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__n">B2</span>
+                    <span class="stat-card__l">Nivel de inglés</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__n">4</span>
+                    <span class="stat-card__l">Idiomas en el sistema</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     HABILIDADES
+════════════════════════════════════════ -->
+<section class="section section--alt" id="habilidades" aria-labelledby="title-habilidades">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__label">02 · Habilidades</span>
+            <h2 class="section__title" id="title-habilidades">Stack tecnológico</h2>
+        </div>
+
+        <div class="skills__grid">
+
+            <!-- Backend -->
+            <div class="skill-group reveal">
+                <h3 class="skill-group__title">
+                    <span class="skill-group__icon" aria-hidden="true">⚙️</span>
+                    Backend
+                </h3>
+                <div class="tags">
+                    <span class="tag tag-be">Java 21</span>
+                    <span class="tag tag-be">Spring Boot</span>
+                    <span class="tag tag-be">Spring Security 6</span>
+                    <span class="tag tag-be">Spring Data JPA</span>
+                    <span class="tag tag-be">Hibernate</span>
+                    <span class="tag tag-be">Spring MVC</span>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-group reveal d1">
+                <h3 class="skill-group__title">
+                    <span class="skill-group__icon" aria-hidden="true">🎨</span>
+                    Frontend
+                </h3>
+                <div class="tags">
+                    <span class="tag tag-fe">HTML5</span>
+                    <span class="tag tag-fe">CSS3</span>
+                    <span class="tag tag-fe">Bootstrap</span>
+                    <span class="tag tag-fe">JavaScript</span>
+                    <span class="tag tag-fe">Thymeleaf</span>
+                </div>
+            </div>
+
+            <!-- Base de datos -->
+            <div class="skill-group reveal d2">
+                <h3 class="skill-group__title">
+                    <span class="skill-group__icon" aria-hidden="true">🗄️</span>
+                    Base de datos
+                </h3>
+                <div class="tags">
+                    <span class="tag tag-db">PostgreSQL</span>
+                    <span class="tag tag-db">ORM / Hibernate</span>
+                </div>
+            </div>
+
+            <!-- Herramientas & Patrones -->
+            <div class="skill-group reveal d3">
+                <h3 class="skill-group__title">
+                    <span class="skill-group__icon" aria-hidden="true">🛠️</span>
+                    Herramientas &amp; Patrones
+                </h3>
+                <div class="tags">
+                    <span class="tag tag-tl">Git</span>
+                    <span class="tag tag-tl">GitHub</span>
+                    <span class="tag tag-tl">Maven</span>
+                    <span class="tag tag-tl">MVC multicapa</span>
+                    <span class="tag tag-tl">RBAC</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     PROYECTO
+════════════════════════════════════════ -->
+<section class="section" id="proyecto" aria-labelledby="title-proyecto">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__label">03 · Proyecto</span>
+            <h2 class="section__title" id="title-proyecto">Trabajo destacado</h2>
+        </div>
+
+        <article class="project-card reveal" aria-label="Sistema de Gestión ICFES">
+            <div class="project-card__head">
+                <div class="project-card__meta">
+                    <span class="project-card__year">2026</span>
+                    <span class="project-card__type">Proyecto Personal</span>
+                </div>
+                <a href="https://github.com/JuanFierro15" target="_blank" rel="noopener noreferrer"
+                   class="project-card__gh" aria-label="Ver perfil en GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <h3 class="project-card__title">Sistema de Gestión ICFES</h3>
+
+            <p class="project-card__desc">
+                Aplicación web MVC desarrollada en Java&nbsp;21 con Spring Boot para la
+                administración integral de instituciones preparatorias para el examen ICFES.
+                Sistema completo con control de acceso por roles, gestión académica y
+                funcionalidades avanzadas de automatización.
+            </p>
+
+            <ul class="project-card__features" role="list">
+                <li>Control de acceso basado en roles (admin, docente, estudiante) implementado con Spring Security 6</li>
+                <li>Gestión de asistencias, generación de simulacros en PDF y materiales de estudio</li>
+                <li>Logs de auditoría y cierre automático de instituciones mediante tareas programadas</li>
+                <li>Internacionalización completa en 4 idiomas (español, inglés, francés, italiano) con Spring MessageSource</li>
+                <li>Base de datos PostgreSQL gestionada con ORM Hibernate vía Spring Data JPA</li>
+            </ul>
+
+            <div class="project-card__stack">
+                <span class="tag tag-sm">Java 21</span>
+                <span class="tag tag-sm">Spring Boot</span>
+                <span class="tag tag-sm">Spring Security 6</span>
+                <span class="tag tag-sm">Spring Data JPA</span>
+                <span class="tag tag-sm">Thymeleaf</span>
+                <span class="tag tag-sm">PostgreSQL</span>
+                <span class="tag tag-sm">Hibernate</span>
+                <span class="tag tag-sm">Maven</span>
+                <span class="tag tag-sm">i18n (4 idiomas)</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     EDUCACIÓN
+════════════════════════════════════════ -->
+<section class="section section--alt" id="educacion" aria-labelledby="title-educacion">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__label">04 · Educación</span>
+            <h2 class="section__title" id="title-educacion">Formación académica</h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline__item reveal">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__card">
+                    <p class="timeline__period">2023 – Presente</p>
+                    <h3 class="timeline__title">Ingeniería de Software</h3>
+                    <p class="timeline__inst">Universidad Surcolombiana &nbsp;·&nbsp; Neiva, Huila, Colombia</p>
+                    <p class="timeline__desc">
+                        Formación universitaria en fundamentos de ingeniería, diseño y desarrollo de
+                        software, bases de datos, estructuras de datos, algoritmos y arquitecturas de
+                        sistemas. Actualmente cursando semestres con énfasis en desarrollo backend y
+                        aplicaciones empresariales.
+                    </p>
+                    <span class="badge-active">En curso</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     CONTACTO
+════════════════════════════════════════ -->
+<section class="section" id="contacto" aria-labelledby="title-contacto">
+    <div class="container">
+        <div class="section__header reveal">
+            <span class="section__label">05 · Contacto</span>
+            <h2 class="section__title" id="title-contacto">Hablemos</h2>
+        </div>
+
+        <div class="contact__wrap reveal">
+            <p class="contact__intro">
+                ¿Tienes una oportunidad laboral o quieres colaborar en un proyecto?
+                Estoy disponible y con muchas ganas de aprender y aportar.
+                No dudes en escribirme.
+            </p>
+
+            <ul class="contact__list" role="list">
+                <li>
+                    <a href="mailto:juandafica19@gmail.com" class="contact-card">
+                        <div class="contact-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card__info">
+                            <span class="contact-card__label">Email</span>
+                            <span class="contact-card__val">juandafica19@gmail.com</span>
+                        </div>
+                        <span class="contact-card__arrow" aria-hidden="true">→</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/JuanFierro15" target="_blank" rel="noopener noreferrer"
+                       class="contact-card">
+                        <div class="contact-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card__info">
+                            <span class="contact-card__label">GitHub</span>
+                            <span class="contact-card__val">github.com/JuanFierro15</span>
+                        </div>
+                        <span class="contact-card__arrow" aria-hidden="true">→</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</main><!-- /main -->
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <span class="footer__logo">&lt;JF/&gt;</span>
+        <p class="footer__copy">
+            © 2026 Juan David Fierro Calderón
+            &nbsp;&nbsp;
+        </p>
+    </div>
+</footer>
+
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
