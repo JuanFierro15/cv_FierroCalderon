@@ -746,6 +746,89 @@ h1,h2,h3,h4 {
 }
 
 /* ================================================================
+   DESCARGAR CV
+================================================================ */
+.cv-download {
+    background: var(--hero-bg);
+    padding: 4rem 0;
+}
+.cv-download__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--r-lg);
+    padding: 2.5rem 3rem;
+    transition: border-color var(--t);
+}
+.cv-download__card:hover {
+    border-color: rgba(37,99,235,.4);
+}
+.cv-download__left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.cv-download__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(37,99,235,.18);
+    border: 1px solid rgba(37,99,235,.3);
+    border-radius: var(--r);
+    color: var(--accent-light);
+    flex-shrink: 0;
+}
+.cv-download__title {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -.3px;
+    margin-bottom: .2rem;
+}
+.cv-download__sub {
+    font-size: .82rem;
+    color: rgba(255,255,255,.38);
+    font-weight: 500;
+}
+.btn--download {
+    background: #fff;
+    color: var(--primary);
+    border-color: #fff;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.btn--download:hover {
+    background: rgba(255,255,255,.88);
+    border-color: rgba(255,255,255,.88);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(255,255,255,.18);
+}
+
+/* nav CV link */
+.nav__link--cv {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    color: rgba(255,255,255,.65);
+    font-size: .875rem;
+    font-weight: 500;
+    padding: .5rem .875rem;
+    border-radius: var(--r-full);
+    transition: all var(--t);
+    border: 1px solid rgba(255,255,255,.18);
+}
+.nav__link--cv:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,.45);
+    background: rgba(255,255,255,.07);
+}
+
+/* ================================================================
    FOOTER
 ================================================================ */
 .footer { background: var(--hero-bg); padding: 2rem 0; }
@@ -788,10 +871,12 @@ h1,h2,h3,h4 {
     .nav__link { padding: .75rem 1rem; border-radius: var(--r); width: 100%; }
     .nav__link--cta { text-align: center; }
 
-    .about__grid   { grid-template-columns: 1fr; gap: 2.5rem; }
-    .skills__grid  { grid-template-columns: 1fr; }
-    .project-card  { padding: 1.75rem; }
-    .footer__inner { flex-direction: column; text-align: center; }
+    .about__grid      { grid-template-columns: 1fr; gap: 2.5rem; }
+    .skills__grid     { grid-template-columns: 1fr; }
+    .project-card     { padding: 1.75rem; }
+    .footer__inner    { flex-direction: column; text-align: center; }
+    .cv-download__card { flex-direction: column; align-items: flex-start; padding: 2rem; }
+    .btn--download    { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 540px) {
