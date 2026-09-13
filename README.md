@@ -8,13 +8,23 @@ Sitio web personal de hoja de vida desarrollado con **Java 21 / Spring Boot** y 
 
 > Ejecuta el proyecto localmente y abre `http://localhost:8080`
 
+<!--
+Recomendación: agrega aquí 1-2 capturas (por ejemplo del hero con el efecto Aurora
+y de la sección de habilidades o proyecto destacado), así:
+
+![Hero](docs/screenshots/hero.png)
+![Sección de habilidades](docs/screenshots/habilidades.png)
+
+Guarda las imágenes en una carpeta docs/screenshots/ en la raíz del repo.
+-->
+
 ---
 
 ## Tecnologías
 
 | Capa | Tecnología |
 |---|---|
-| Backend | Java 21, Spring Boot 4, Spring MVC |
+| Backend | Java 25, Spring Boot 4, Spring MVC |
 | Template | Thymeleaf |
 | Estilos | CSS3 (custom, sin frameworks) |
 | Interactividad | JavaScript (Vanilla) — IntersectionObserver, scroll events |
@@ -29,17 +39,21 @@ Sitio web personal de hoja de vida desarrollado con **Java 21 / Spring Boot** y 
 ```
 cv_fierroCalderon/
 ├── src/
-│   └── main/
-│       ├── java/co/com/fierroCalderoncv/
-│       │   ├── CvFierroCalderonApplication.java   # Clase principal Spring Boot
-│       │   └── HomeController.java                # Controlador MVC — sirve "/"
-│       └── resources/
-│           ├── templates/
-│           │   └── index.html                     # Template Thymeleaf (página única)
-│           ├── static/
-│           │   ├── css/style.css                  # Sistema de diseño completo
-│           │   └── js/main.js                     # Animaciones y navegación
-│           └── application.properties
+│   ├── main/
+│   │   ├── java/co/com/fierroCalderoncv/
+│   │   │   ├── CvFierroCalderonApplication.java   # Clase principal Spring Boot
+│   │   │   └── HomeController.java                # Controlador MVC — sirve "/"
+│   │   └── resources/
+│   │       ├── templates/
+│   │       │   └── index.html                     # Template Thymeleaf (página única)
+│   │       ├── static/
+│   │       │   ├── css/style.css                  # Sistema de diseño completo
+│   │       │   ├── js/main.js                     # Animaciones y navegación
+│   │       │   └── cv-juan-fierro.pdf              # PDF descargable de la hoja de vida
+│   │       └── application.properties
+│   └── test/
+│       └── java/co/com/fierroCalderoncv/
+│           └── CvFierroCalderonApplicationTests.java
 ├── pom.xml
 └── mvnw / mvnw.cmd
 ```
@@ -50,7 +64,7 @@ cv_fierroCalderon/
 
 ### Requisitos
 
-- Java 21 o superior
+- Java 25 o superior (versión configurada en `pom.xml`)
 - Maven (o usar el wrapper incluido `mvnw`)
 
 ### Pasos
@@ -79,6 +93,7 @@ http://localhost:8080
 | 03 | **Proyecto** | Sistema de Gestión ICFES — proyecto destacado |
 | 04 | **Educación** | Formación académica — Universidad Surcolombiana |
 | 05 | **Contacto** | Email y GitHub |
+| 06 | **Descarga CV** | Botón para descargar la hoja de vida en PDF |
 
 ---
 
@@ -100,3 +115,9 @@ Aplicación web MVC para la administración de instituciones preparatorias para 
 - **Email:** juandafica19@gmail.com
 - **GitHub:** [github.com/JuanFierro15](https://github.com/JuanFierro15)
 - **Ciudad:** Neiva, Huila, Colombia
+
+---
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT — ver el archivo [LICENSE](LICENSE) para más detalles.
