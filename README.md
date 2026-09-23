@@ -90,14 +90,16 @@ http://localhost:8080
 |---|---|---|
 | 01 | **Sobre mí** | Presentación personal y estadísticas clave |
 | 02 | **Habilidades** | Stack tecnológico agrupado por categoría |
-| 03 | **Proyecto** | Sistema de Gestión ICFES — proyecto destacado |
+| 03 | **Proyecto** | Proyectos destacados — Sistema de Gestión ICFES, Ping Pong Tracker y Autofoco |
 | 04 | **Educación** | Formación académica — Universidad Surcolombiana |
 | 05 | **Contacto** | Email y GitHub |
 | 06 | **Descarga CV** | Botón para descargar la hoja de vida en PDF |
 
 ---
 
-## Proyecto destacado — Sistema de Gestión ICFES
+## Proyectos destacados
+
+### Sistema de Gestión ICFES
 
 Aplicación web MVC para la administración de instituciones preparatorias para el examen ICFES.
 
@@ -107,6 +109,25 @@ Aplicación web MVC para la administración de instituciones preparatorias para 
 - Logs de auditoría y cierre automático de instituciones con tareas programadas
 - Internacionalización en 4 idiomas: español, inglés, francés e italiano
 - Base de datos PostgreSQL gestionada con Hibernate / Spring Data JPA
+- Aplicación contenerizada con Docker para un entorno de despliegue reproducible
+
+### Ping Pong Tracker
+
+PWA para el seguimiento de partidos de ping-pong, funcional sin conexión y empaquetable como app Android.
+
+**Funcionalidades principales:**
+- Funcionamiento 100% offline mediante persistencia local con IndexedDB (Dexie.js)
+- Empaquetada como app Android nativa con Capacitor, generando un APK instalable
+- Interfaz construida con React y Vite, estilizada con Tailwind CSS
+
+### Autofoco
+
+Red social para aficionados a los vehículos, desarrollada en Kotlin nativo para Android.
+
+**Funcionalidades principales:**
+- Consumo de API REST con Retrofit para la gestión de publicaciones y usuarios
+- Persistencia local offline-first con Room
+- Gestión de sesión y preferencias de usuario con SharedPreferences
 
 ---
 
