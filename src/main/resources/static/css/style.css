@@ -124,6 +124,7 @@ h1,h2,h3,h4 {
 .reveal.d2 { transition-delay: 160ms; }
 .reveal.d3 { transition-delay: 240ms; }
 .reveal.d4 { transition-delay: 320ms; }
+.reveal.d5 { transition-delay: 400ms; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ── Hero items (CSS-only entrance, no JS needed) ── */

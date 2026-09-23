@@ -157,11 +157,11 @@
 
             <div class="stats reveal d1">
                 <div class="stat-card">
-                    <span class="stat-card__n">1</span>
-                    <span class="stat-card__l">Proyecto empresarial completo</span>
+                    <span class="stat-card__n">3</span>
+                    <span class="stat-card__l">Proyectos desarrollados</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-card__n">10+</span>
+                    <span class="stat-card__n">20+</span>
                     <span class="stat-card__l">Tecnologías del stack</span>
                 </div>
                 <div class="stat-card">
@@ -248,6 +248,41 @@
                 </div>
             </div>
 
+            <!-- Desarrollo Móvil -->
+            <div class="skill-group reveal d4">
+                <h3 class="skill-group__title">
+                    <span class="skill-group__icon" aria-hidden="true">📱</span>
+                    Desarrollo Móvil
+                </h3>
+                <div class="tags">
+                    <span class="tag tag-tl">Kotlin</span>
+                    <span class="tag tag-tl">Android SDK</span>
+                    <span class="tag tag-tl">Retrofit</span>
+                    <span class="tag tag-tl">Room</span>
+                    <span class="tag tag-tl">SharedPreferences</span>
+                    <span class="tag tag-tl">RecyclerView</span>
+                    <span class="tag tag-tl">Material Design</span>
+                    <span class="tag tag-tl">ViewBinding</span>
+                    <span class="tag tag-tl">ConstraintLayout</span>
+                </div>
+            </div>
+
+            <!-- Frontend Moderno -->
+            <div class="skill-group reveal d5">
+                <h3 class="skill-group__title">
+                    <span class="skill-group__icon" aria-hidden="true">⚡</span>
+                    Frontend Moderno
+                </h3>
+                <div class="tags">
+                    <span class="tag tag-fe">React</span>
+                    <span class="tag tag-fe">Vite</span>
+                    <span class="tag tag-fe">Tailwind CSS</span>
+                    <span class="tag tag-fe">Sass</span>
+                    <span class="tag tag-fe">GSAP</span>
+                    <span class="tag tag-fe">PWA / Offline-first</span>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -292,6 +327,7 @@
                 <li>Logs de auditoría y cierre automático de instituciones mediante tareas programadas</li>
                 <li>Internacionalización completa en 4 idiomas (español, inglés, francés, italiano) con Spring MessageSource</li>
                 <li>Base de datos PostgreSQL gestionada con ORM Hibernate vía Spring Data JPA</li>
+                <li>Aplicación contenerizada con Docker para un entorno de despliegue reproducible y portable</li>
             </ul>
 
             <div class="project-card__stack">
@@ -303,7 +339,83 @@
                 <span class="tag tag-sm">PostgreSQL</span>
                 <span class="tag tag-sm">Hibernate</span>
                 <span class="tag tag-sm">Maven</span>
+                <span class="tag tag-sm">Docker</span>
                 <span class="tag tag-sm">i18n (4 idiomas)</span>
+            </div>
+        </article>
+
+        <article class="project-card reveal" aria-label="ping-pong-tracker">
+            <div class="project-card__head">
+                <div class="project-card__meta">
+                    <span class="project-card__year">2026</span>
+                    <span class="project-card__type">Proyecto Personal</span>
+                </div>
+                <a href="https://github.com/JuanFierro15/ping-pong-tracker" target="_blank" rel="noopener noreferrer"
+                   class="project-card__gh" aria-label="Ver repositorio en GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <h3 class="project-card__title">Ping Pong Tracker</h3>
+
+            <p class="project-card__desc">
+                Aplicación web progresiva (PWA) para el seguimiento de partidos de ping-pong,
+                pensada para funcionar completamente sin conexión y empaquetarse como app móvil
+                nativa a partir de la misma base de código.
+            </p>
+
+            <ul class="project-card__features" role="list">
+                <li>Funcionamiento 100% offline mediante persistencia local con IndexedDB (Dexie.js)</li>
+                <li>Empaquetada como app Android nativa con Capacitor, generando un APK instalable</li>
+                <li>Interfaz construida con React y Vite, estilizada con Tailwind CSS</li>
+            </ul>
+
+            <div class="project-card__stack">
+                <span class="tag tag-sm">React</span>
+                <span class="tag tag-sm">Vite</span>
+                <span class="tag tag-sm">PWA</span>
+                <span class="tag tag-sm">Capacitor</span>
+                <span class="tag tag-sm">IndexedDB (Dexie.js)</span>
+                <span class="tag tag-sm">Tailwind CSS</span>
+            </div>
+        </article>
+
+        <article class="project-card reveal" aria-label="autofoco-android">
+            <div class="project-card__head">
+                <div class="project-card__meta">
+                    <span class="project-card__year">2026</span>
+                    <span class="project-card__type">Proyecto Académico</span>
+                </div>
+                <a href="https://github.com/JuanFierro15/autofoco-android" target="_blank" rel="noopener noreferrer"
+                   class="project-card__gh" aria-label="Ver repositorio en GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <h3 class="project-card__title">Autofoco</h3>
+
+            <p class="project-card__desc">
+                Red social para aficionados a los vehículos, centrada en compartir fotografías
+                y datos técnicos. Desarrollada en Kotlin nativo para Android como proyecto de la
+                materia Dispositivos Móviles.
+            </p>
+
+            <ul class="project-card__features" role="list">
+                <li>Consumo de API REST con Retrofit para la gestión de publicaciones y usuarios</li>
+                <li>Persistencia local offline-first con Room, permitiendo uso sin conexión</li>
+                <li>Gestión de sesión y preferencias de usuario con SharedPreferences</li>
+            </ul>
+
+            <div class="project-card__stack">
+                <span class="tag tag-sm">Kotlin</span>
+                <span class="tag tag-sm">Retrofit</span>
+                <span class="tag tag-sm">Room</span>
+                <span class="tag tag-sm">SharedPreferences</span>
+                <span class="tag tag-sm">Android SDK</span>
             </div>
         </article>
     </div>
