@@ -1,0 +1,89 @@
+name: Deploy CV to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Configurar JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: maven
+
+      - name: Compilar con Maven
+        run: |
+          chmod +x mvnw
+          ./mvnw -B package -DskipTests
+
+      - name: Levantar la aplicación en segundo plano
+        run: |
+          nohup java -jar target/*.jar > app.log 2>&1 &
+          echo $! > app.pid
+
+      - name: Esperar a que el servidor esté listo
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8080/ -o /dev/null; then
+              echo "Servidor listo (intento $i)"
+              exit 0
+            fi
+            echo "Esperando servidor... intento $i"
+            sleep 2
+          done
+          echo "El servidor no respondió a tiempo"
+          cat app.log
+          exit 1
+
+      - name: Generar sitio estático
+        run: |
+          mkdir -p site/css site/js
+          curl -sf http://localhost:8080/ -o site/index.html
+          cp src/main/resources/static/css/style.css site/css/style.css
+          cp src/main/resources/static/js/main.js site/js/main.js
+          cp src/main/resources/static/cv-juan-fierro.pdf site/cv-juan-fierro.pdf
+
+      - name: Ajustar rutas absolutas a relativas
+        run: |
+          sed -i \
+            -e 's|href="/css/|href="css/|g' \
+            -e 's|src="/js/|src="js/|g' \
+            -e 's|href="/cv-juan-fierro.pdf"|href="cv-juan-fierro.pdf"|g' \
+            site/index.html
+
+      - name: Detener la aplicación
+        if: always()
+        run: kill "$(cat app.pid)" || true
+
+      - name: Subir artefacto de Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
